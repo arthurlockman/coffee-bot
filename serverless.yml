@@ -13,6 +13,8 @@ provider:
         - "s3:*"
       Resource:
         Fn::Join: ['', [Fn::GetAtt: [ CoffeeStatusBucket, Arn ], '/*'] ]
+  environment:
+    ZAPIER_URL: ${ssm:zapier-webhook-url~true}
 
 functions:
   GetStatus:

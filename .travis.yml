@@ -6,8 +6,6 @@ cache:
     - node_modules
 script:
   - npm i -g serverless
-  - tsc
-  - rm -r dist/
 deploy:
   - provider: script
     script: npm i && npm run deploy
