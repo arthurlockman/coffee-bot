@@ -1,0 +1,28 @@
+{
+    "name": "coffee-bot",
+    "version": "1.0.0",
+    "repository": "https://github.com/arthurlockman/coffee-bot",
+    "main": "dist/handler.ts",
+    "scripts": {
+        "build": "tsc",
+        "deploy": "serverless create_domain; serverless deploy",
+        "debug": "export SLS_DEBUG=* && node --inspect ./node_modules/.bin/serverless offline start --aws-profile coffee-bot"
+    },
+    "author": "Arthur Lockman",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.24",
+        "@types/node": "^11.13.4",
+        "@types/request-promise": "^4.1.42",
+        "serverless": "^1.40.0",
+        "serverless-plugin-typescript": "^1.1.7",
+        "serverless-domain-manager": "^2.6.13",
+        "serverless-offline": "^4.9.4",
+        "tslint": "^5.15.0",
+        "typescript": "^3.4.3"
+    },
+    "dependencies": {
+        "request": "^2.87.0",
+        "request-promise": "^4.2.2"
+    }
+}
