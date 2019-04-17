@@ -63,4 +63,22 @@ const UpdateStatus: Handler = async (event: APIGatewayEvent) => {
 };
 
 // noinspection JSUnusedGlobalSymbols
-export {GetStatus, UpdateStatus}
+const QuickActionOut: Handler = async (event: APIGatewayEvent) => {
+    return UpdateStatus({
+        body: JSON.stringify({
+            status: false
+        })
+    }, null, null);
+};
+
+// noinspection JSUnusedGlobalSymbols
+const QuickActionIn: Handler = async (event: APIGatewayEvent) => {
+    return UpdateStatus({
+        body: JSON.stringify({
+            status: true
+        })
+    }, null, null);
+};
+
+// noinspection JSUnusedGlobalSymbols
+export {GetStatus, UpdateStatus, QuickActionOut, QuickActionIn}

@@ -33,6 +33,20 @@ functions:
           path: status
           method: post
           cors: true
+  QuickActionOut:
+    handler: handler.QuickActionOut
+    description: Quickly mark the status as out
+    events:
+      - http:
+          path: quickaction/out
+          method: get
+  QuickActionIn:
+    handler: handler.QuickActionIn
+    description: Quickly mark the status as in
+    events:
+      - http:
+          path: quickaction/in
+          method: get
 
 resources:
   Resources:

@@ -20,3 +20,13 @@ To update the coffee status make a `POST` call to `https://coffeestatus.rthr.me/
 Sending `true` will update the status to true, and sending `false` will update it to false.
 
 Sending a status update will also post an update to the coffee Slack room.
+
+## Quick Actions
+
+The service supports a few quick actions. 
+
+To update the coffee status to "in", make a `GET` call or load this URL in a browser: 
+`https://coffeestatus.rthr.me/quickaction/in`
+
+To update the coffee status to "out", make a `GET` call or load this URL in a browser: 
+`https://coffeestatus.rthr.me/quickaction/out`
