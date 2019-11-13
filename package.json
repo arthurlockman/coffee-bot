@@ -1,6 +1,6 @@
 {
     "name": "coffee-bot",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "repository": "https://github.com/arthurlockman/coffee-bot",
     "main": "dist/handler.ts",
     "scripts": {
